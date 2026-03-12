@@ -77,6 +77,18 @@ def inactive_buses(cursor):
     for row in cursor.fetchall():
         print(f'  {row[0]} | {row[1]} | {row[2]}')
 
+def upcoming_trips(cursor):
+    print_header('UPCOMING TRIPS')
+    cursor.execute('''
+        SELECT r.route_name, d.full_name, t.scheduled_departure_time
+        FROM trips t
+        JOIN routes r ON t.route_id = r.route_id
+        JOIN drivers d ON t.driver_id = d.driver_id
+        WHERE t.status = 'scheduled'
+    ''')
+    for row in cursor.fetchall():
+        print(f'  {row[0]} | {row[1]} | {row[2]}')
+
 def main():
     print()
     print(f'  ABUJA CORPORATE TRANSPORT PLATFORM')
@@ -90,6 +102,7 @@ def main():
     route_demand(cursor)
     active_drivers(cursor)
     inactive_buses(cursor)
+    upcoming_trips(cursor)
 
     conn.close()
     print()
