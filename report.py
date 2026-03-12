@@ -67,6 +67,16 @@ def active_drivers(cursor):
     for row in cursor.fetchall():
         print(f'  {row[0]} | {row[1]}')
 
+def inactive_buses(cursor):
+    print_header('INACTIVE BUSES')
+    cursor.execute('''
+        SELECT bus_name, bus_type, plate_number
+        FROM buses
+        WHERE is_active = FALSE
+    ''')
+    for row in cursor.fetchall():
+        print(f'  {row[0]} | {row[1]} | {row[2]}')
+
 def main():
     print()
     print(f'  ABUJA CORPORATE TRANSPORT PLATFORM')
@@ -79,6 +89,7 @@ def main():
     trip_summary(cursor)
     route_demand(cursor)
     active_drivers(cursor)
+    inactive_buses(cursor)
 
     conn.close()
     print()
