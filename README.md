@@ -14,6 +14,7 @@ platform performance.
 - Automated operational report via terminal
 - Dynamic data insertion script
 - Live web dashboard served via Flask
+- Full CRUD web interface — create bookings, complete trips, cancel bookings directly from browser
 
 ## Tech Stack
 - Python 3.11
