@@ -1,0 +1,85 @@
+
+========================================
+  PIPELINE RUN — 14 March 2026, 06:04 PM
+========================================
+Extracting data...
+  Extracted 4 trips
+Transforming data...
+  Trip 1 | Route A | Occupancy: 11.11% | Revenue: ₦3,000.00
+  Trip 2 | Route B | Occupancy: 7.14% | Revenue: ₦1,500.00
+  Trip 3 | Route A | Occupancy: 27.78% | Revenue: ₦7,500.00
+  Trip 4 | Route B | Occupancy: 21.43% | Revenue: ₦4,500.00
+Loading into summary table...
+  Loaded 4 records into trip_summary_log
+
+Pipeline complete.
+========================================
+
+
+========================================
+  PIPELINE RUN — 14 March 2026, 06:06 PM
+========================================
+Extracting data...
+  Extracted 4 trips
+Transforming data...
+  Trip 1 | Route A | Occupancy: 11.11% | Revenue: ₦3,000.00
+  Trip 2 | Route B | Occupancy: 7.14% | Revenue: ₦1,500.00
+  Trip 3 | Route A | Occupancy: 27.78% | Revenue: ₦7,500.00
+  Trip 4 | Route B | Occupancy: 21.43% | Revenue: ₦4,500.00
+Loading into summary table...
+  Loaded 4 records into trip_summary_log
+
+Pipeline complete.
+========================================
+
+
+========================================
+  PIPELINE RUN — 14 March 2026, 06:08 PM
+========================================
+Extracting data...
+  Extracted 4 trips
+Transforming data...
+  Trip 1 | Route A | Occupancy: 11.11% | Revenue: ₦3,000.00
+  Trip 2 | Route B | Occupancy: 7.14% | Revenue: ₦1,500.00
+  Trip 3 | Route A | Occupancy: 27.78% | Revenue: ₦7,500.00
+  Trip 4 | Route B | Occupancy: 21.43% | Revenue: ₦4,500.00
+Loading into summary table...
+  Loaded 4 records into trip_summary_log
+
+Pipeline complete.
+========================================
+
+
+========================================
+  PIPELINE RUN — 14 March 2026, 06:10 PM
+========================================
+Extracting data...
+  Extracted 4 trips
+Transforming data...
+  Trip 1 | Route A | Occupancy: 11.11% | Revenue: ₦3,000.00
+  Trip 2 | Route B | Occupancy: 7.14% | Revenue: ₦1,500.00
+  Trip 3 | Route A | Occupancy: 27.78% | Revenue: ₦7,500.00
+  Trip 4 | Route B | Occupancy: 21.43% | Revenue: ₦4,500.00
+Loading into summary table...
+  Loaded 4 records into trip_summary_log
+
+Pipeline complete.
+========================================
+
+
+========================================
+  PIPELINE RUN — 14 March 2026, 06:12 PM
+========================================
+Extracting data...
+  Extracted 4 trips
+Transforming data...
+  Trip 1 | Route A | Occupancy: 11.11% | Revenue: ₦3,000.00
+  Trip 2 | Route B | Occupancy: 7.14% | Revenue: ₦1,500.00
+  Trip 3 | Route A | Occupancy: 27.78% | Revenue: ₦7,500.00
+  Trip 4 | Route B | Occupancy: 21.43% | Revenue: ₦4,500.00
+Loading into summary table...
+  Loaded 4 records into trip_summary_log
+
+Pipeline complete.
+========================================
+
