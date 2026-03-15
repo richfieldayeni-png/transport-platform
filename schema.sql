@@ -1,5 +1,5 @@
 -- Users Table
-CREATE TABLE users (
+CREATE TABLE IF NOT EXISTS users (
     user_id INTEGER PRIMARY KEY AUTOINCREMENT,
     full_name TEXT NOT NULL,
     phone_number TEXT UNIQUE NOT NULL,
@@ -10,7 +10,7 @@ CREATE TABLE users (
 );
 
 -- Drivers Table
-CREATE TABLE drivers (
+CREATE TABLE IF NOT EXISTS drivers (
     driver_id INTEGER PRIMARY KEY AUTOINCREMENT,
     full_name TEXT NOT NULL,
     phone_number TEXT UNIQUE NOT NULL,
@@ -19,7 +19,7 @@ CREATE TABLE drivers (
     is_active BOOLEAN DEFAULT TRUE
 );
 -- Admin Table
-CREATE TABLE admins (
+CREATE TABLE IF NOT EXISTS admins (
     admin_id INTEGER PRIMARY KEY AUTOINCREMENT,
     full_name TEXT NOT NULL,
     email TEXT UNIQUE NOT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE admins (
 );
 
 -- Routes Table
-CREATE TABLE routes (
+CREATE TABLE IF NOT EXISTS routes (
     route_id INTEGER PRIMARY KEY AUTOINCREMENT,
     route_name TEXT NOT NULL,
     origin TEXT NOT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE routes (
 );
 
 -- Buses Table
-CREATE TABLE buses (
+CREATE TABLE IF NOT EXISTS buses (
     bus_id INTEGER PRIMARY KEY AUTOINCREMENT,
     bus_name TEXT NOT NULL,
     bus_type TEXT,
@@ -49,7 +49,7 @@ CREATE TABLE buses (
 );
 
 -- Trips Table
-CREATE TABLE trips (
+CREATE TABLE IF NOT EXISTS trips (
     trip_id INTEGER PRIMARY KEY AUTOINCREMENT,
     route_id INTEGER REFERENCES routes(route_id),
     bus_id INTEGER REFERENCES buses(bus_id),
@@ -63,7 +63,7 @@ CREATE TABLE trips (
 );
 
 -- Payments Table
-CREATE TABLE payments (
+CREATE TABLE IF NOT EXISTS payments (
     payment_id INTEGER PRIMARY KEY AUTOINCREMENT,
     payment_type TEXT NOT NULL,
     payment_status TEXT DEFAULT 'pending',
@@ -74,7 +74,7 @@ CREATE TABLE payments (
 );
 
 -- Bookings Table
-CREATE TABLE bookings (
+CREATE TABLE IF NOT EXISTS bookings (
     booking_id INTEGER PRIMARY KEY AUTOINCREMENT,
     user_id INTEGER REFERENCES users(user_id),
     trip_id INTEGER REFERENCES trips(trip_id),
@@ -86,7 +86,7 @@ CREATE TABLE bookings (
 );
 
 -- Notifications Table
-CREATE TABLE notifications (
+CREATE TABLE IF NOT EXISTS notifications (
     notification_id INTEGER PRIMARY KEY AUTOINCREMENT,
     user_id INTEGER REFERENCES users(user_id),
     trip_id INTEGER REFERENCES trips(trip_id),
@@ -96,7 +96,7 @@ CREATE TABLE notifications (
 );
 
 -- GPS Tracking Table
-CREATE TABLE gps_locations (
+CREATE TABLE IF NOT EXISTS gps_locations (
     location_id INTEGER PRIMARY KEY AUTOINCREMENT,
     trip_id INTEGER REFERENCES trips(trip_id),
     bus_id INTEGER REFERENCES buses(bus_id),
