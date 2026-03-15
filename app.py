@@ -3,6 +3,9 @@ import sqlite3
 
 app = Flask(__name__)
 
+import init_db
+init_db.init()
+
 def connect():
     return sqlite3.connect('transport.db')
 
