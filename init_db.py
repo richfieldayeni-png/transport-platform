@@ -1,5 +1,3 @@
-cd ~/transport-platform
-cat > init_db.py << 'EOF'
 import sqlite3
 
 def init():
@@ -11,4 +9,3 @@ def init():
     print('Database initialized')
 
 init()
-EOF
